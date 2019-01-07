@@ -23,19 +23,19 @@ Solution_Hard=["EXOSPHERE", "THERMOSPHERE", "MESOSPHERE", "STRATOSPHERE", "TROPO
 
 #User select difficulty levels & number of attempts
 
-userchoice=(raw_input("Please select your difficulty level. Choose between Easy, Medium and Hard: " "")).capitalize() #raw_input is a command that prompts the user to input something
+userchoice=(input("Please select your difficulty level. Choose between Easy, Medium and Hard: " "")).capitalize() #input is a command that prompts the user to input something
 #validate user choice of difficulty
 while userchoice =='':
-    userchoice = (raw_input("\nYou must choose a difficulty level. Choose between Easy, Medium and Hard: " "")).capitalize()
+    userchoice = (input("\nYou must choose a difficulty level. Choose between Easy, Medium and Hard: " "")).capitalize()
 
 while (userchoice != 'Easy' and userchoice != 'Medium' and userchoice != 'Hard'):
-    userchoice = (raw_input("\nPlease enter a valid difficulty level. Choose between Easy, Medium and Hard: " "")).capitalize()
+    userchoice = (input("\nPlease enter a valid difficulty level. Choose between Easy, Medium and Hard: " "")).capitalize()
 
-usercount=(raw_input("\nPlease decide how many wrong guesses you can make before you lose: " "")) #int allows you to take user's input as a whole number instead of a default string
+usercount=(input("\nPlease decide how many wrong guesses you can make before you lose: " "")) #int allows you to take user's input as a whole number instead of a default string
 #validate user input for counts
 
 while usercount.isdigit() == False:
-    usercount=(raw_input("\nPlease enter a valid number. Enter how many wrong guesses you can make before you lose: " ""))
+    usercount=(input("\nPlease enter a valid number. Enter how many wrong guesses you can make before you lose: " ""))
 
 #cast usercount to integer
 usercount = int(usercount)
@@ -47,7 +47,7 @@ def replace_in_phrase(phrase,answers):
     index=0
     while count <=usercount:#sets the number of cycles with respect to wrong answers. If count>usercount, user loses
         while index<len(answers):
-            user_input=(raw_input("\nWhat should go in"+" "+ "___"+str(index+1)+"___"+" "+"?"" ")).upper()
+            user_input=(input("\nWhat should go in"+" "+ "___"+str(index+1)+"___"+" "+"?"" ")).upper()
             if answers[index]==user_input:
                 phrase=phrase.replace("___"+str(index+1)+"___", user_input) #blanks start at 1 and not 0
                 print ("\nGood job! Here's how the text looks like now:\n\n" + phrase + "\n")
