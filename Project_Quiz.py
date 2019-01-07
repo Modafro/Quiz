@@ -50,11 +50,11 @@ def replace_in_phrase(phrase,answers):
             user_input=(raw_input("\nWhat should go in"+" "+ "___"+str(index+1)+"___"+" "+"?"" ")).upper()
             if answers[index]==user_input:
                 phrase=phrase.replace("___"+str(index+1)+"___", user_input) #blanks start at 1 and not 0
-                print "\nGood job! Here's how the text looks like now:\n\n" + phrase + "\n"
+                print ("\nGood job! Here's how the text looks like now:\n\n" + phrase + "\n")
                 index+=1 #if the answer is good, we go to the next blank (+1)
             else: #if user is wrong
                 if count<usercount: #if it's the user's last try (i.e:count==usercount), we don't want to print "Wrong answer, Try again" if he fails. This condition sets that.
-                    print "\nWrong answer! Try again!\n"
+                    print ("\nWrong answer! Try again!\n")
                 break; #breaking out of the secondary while loop to either increase the count (+1) or confirm if the user has won or if the user has lost
         if index==len(answers):
             return "\nYou won :)"
@@ -66,16 +66,16 @@ def replace_in_phrase(phrase,answers):
 def quiz(level, attempts):
     if level== "Easy":
         phrase = easy_phrase
-        print "\nEasy it is. You will have" + " "+str(attempts)+" " + "attempt(s) to get it right. Here is the phrase:" + "\n"*2 + phrase + "\n"
+        print ("\nEasy it is. You will have" + " "+str(attempts)+" " + "attempt(s) to get it right. Here is the phrase:" + "\n"*2 + phrase + "\n")
         return replace_in_phrase (easy_phrase, Solution_Easy)
     if level=="Medium":
         phrase = medium_phrase
-        print "\nMedium it is. Hope you are politically astute. You will have" +" "+ str(attempts)+" "+ "attempt(s) to get it right. Here is the phrase:" + "\n"*2 + phrase + "\n"
+        print ("\nMedium it is. Hope you are politically astute. You will have" +" "+ str(attempts)+" "+ "attempt(s) to get it right. Here is the phrase:" + "\n"*2 + phrase + "\n")
         return replace_in_phrase (medium_phrase, Solution_Medium)
     if level=="Hard":
         phrase = hard_phrase
-        print "\nThink you can handle hard? Let's find out! You will have" +" " +str(attempts) +" "+ "attempt(s) to get it right! Here is the phrase:" + "\n"*2 + phrase + "\n"
+        print ("\nThink you can handle hard? Let's find out! You will have" +" " +str(attempts) +" "+ "attempt(s) to get it right! Here is the phrase:" + "\n"*2 + phrase + "\n")
         return replace_in_phrase (hard_phrase, Solution_Hard)
 
 
-print quiz (userchoice, usercount)
+print (quiz (userchoice, usercount))
