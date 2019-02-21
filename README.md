@@ -10,7 +10,7 @@ You can choose to play the quiz online or alternatively download the project fol
 
 ### Play the Quiz
 1. Play Online
-- Simply [click here](https://repl.it/repls/StingyBlueDeveloper) to play online. Just "run" the script and play away!
+- Simply [click here](https://repl.it/repls/AvariciousSuperbGlobalarrays) to play online. Just "run" the script and play away!
 2. Run in Python
 - Download the Project_Quiz.py file
 - Install the latest Python version [here](https://www.python.org/downloads/)
