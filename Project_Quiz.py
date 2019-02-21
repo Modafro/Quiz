@@ -34,8 +34,8 @@ while (userchoice != 'Easy' and userchoice != 'Medium' and userchoice != 'Hard')
 usercount=(input("\nPlease decide how many wrong guesses you can make before you lose: " "")) #int allows you to take user's input as a whole number instead of a default string
 #validate user input for counts
 
-while usercount.isdigit() == False:
-    usercount=(input("\nPlease enter a valid number. Enter how many wrong guesses you can make before you lose: " ""))
+while usercount.isdigit() == False or usercount == '0':
+    usercount=(input("\nPlease enter a valid number (at least 1). Enter how many wrong guesses you can make before you lose: " ""))
 
 #cast usercount to integer
 usercount = int(usercount)
